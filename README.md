@@ -1,5 +1,6 @@
 # detect-IE
-Detects all versions of Internet Explorer without resorting to User-Agent hacks
+Detects all versions of Internet Explorer without resorting to User-Agent hacks.
+
 Exposes a global object, `IE`, with the following properties: `engine`, and `documentMode`.
 
 IE7 in IE6 compatibility mode will return `engine` as `"5.7"`, and `documentMode` as `6`.
