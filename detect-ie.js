@@ -21,7 +21,7 @@ var IE = (function(win, undefined) { // keep the global namespace unpolluted by 
 		var version = new Function("/*@cc_on return @_jscript_version; @*/")();
 		// "5.6/7": IE6, "5.7": IE7, "5.8": IE8, "9":IE9, "10": IE10, "11": IE11 with an older document mode.
 		// undefined if not IE, or regular IE11
-		// differentiate between IE6 and IE7.
+		// TODO: differentiate between IE6 and IE7.
 		return version;
 	})();
 	
