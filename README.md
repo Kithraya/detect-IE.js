@@ -9,4 +9,4 @@ Caveats: When the current document has not yet been determined, documentMode ret
 
 This property is available in all compatibility modes.
 
-At the moment, this can not always distinguish between IE6 and IE7 due to the Service Pack update. I will work on it.
+At the moment, `detect-ie.js` can not always distinguish between the IE6 and IE7 engine, due to the infamous Service Pack update. There are workarounds, and I will work on implementing one.
