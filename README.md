@@ -16,5 +16,7 @@ Caveats:
 Usage:
 
 `if (isIE) {    
-  var version = isIE.version, engine = isIE.engine, documentMode = isIE.documentMode.
+  var version = isIE.version, 
+      engine = isIE.engine, 
+      documentMode = isIE.documentMode;
 }`
