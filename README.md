@@ -1,14 +1,15 @@
 # detect-IE
-Detects all* versions of Internet Explorer without resorting to User-Agent hacks.
+Detects all* versions of Internet Explorer without resorting to User-Agent hacks, using conditional compilation. Supports minification.
 
-Exposes a global object, `IE`, with the following properties: `engine`, and `documentMode`.
+If the browser is IE, `isIE` is a global object with the following properties: `version`, `engine`, and `documentMode`.
 
-IE7 in IE6 compatibility mode will return `engine` as `"5.7"`, and `documentMode` as `6`.
+IE8 in IE6 compatibility mode will return `version` as `8`, `engine` as `5.8`, and `documentMode` as `6`.
 
-If the browser is not IE, `IE.engine` and `IE.documentMode` default to `undefined`.
+If the browser is not IE, `isIE` will be `false`.
 
-Caveats: When the current document has not yet been determined (in IE), documentMode returns a value of zero (0). This usually happens when a document is loading. When a return value of zero is received, try to determine the document compatibility mode after the DOM has loaded.
+Caveats:
+1. When the current document has not yet been determined (in IE), documentMode returns a value of zero (0). This usually happens when a document is loading. When a return value of zero is received, try to determine the document compatibility mode after the DOM has loaded.
 
-This property is available in all compatibility modes.
+2. If you have a polyfill that defines 'currentScript', place this code before it, else there will be a false negative for IE 11. Or remove the check for 'currentScript', but that may not be futureproof.
 
-*At the moment, `detect-ie.js` will not always distinguish between the IE6 and IE7 engine, due to the infamous Windows XP Service Pack Update. There are workarounds, to be added.
+
