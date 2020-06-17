@@ -21,7 +21,7 @@ window.isIE = (function(win, doc, undefined) {
 	// and `@_jscript_version` will return "11". (Yep, textbook Microsoft)
 
 	// Conditional compilation executes in IE only, and does not change with document mode.
-	/// IE6|7: 5.6 / 5.7, IE8: 5.8, IE9: 9, IE10: 10, IE11*: 11, IE11: undefined, NOT IE: undefined; 
+	/// Values: IE6|7: "5.6" / "5.7", IE8: "5.8", IE9: "9", IE10: "10", IE11*: "11", IE11: `undefined`, NOT IE: `undefined`; 
 	
 	var jscript_version = Number( new Function("/*@cc_on return @_jscript_version; @*/")() ) || undefined; 
 	
