@@ -1,9 +1,9 @@
 # detect-IE
-Detects all* versions of Internet Explorer without resorting to User-Agent hacks, using conditional compilation. Supports minification.
+Detects all* true versions of Internet Explorer, irrespective of document mode, without resorting to User-Agent hacks. Supports minification.
 
-Creates a global variable, `isIE` If the browser is IE, `isIE` is an object with the following properties: `version`, `engine`, and `documentMode`.
+Creates a global variable, `isIE`. If the browser is IE, `isIE` is an object with the following properties: `version`, `engine`, and `documentMode`.
 
-IE8 in IE6 compatibility mode will return `version` as `8`, `engine` as `5.8`, and `documentMode` as `6`.
+For example, IE8 in IE6 compatibility mode will return `version` as `8`, `engine` as `5.8`, and `documentMode` as `6`.
 
 If the browser is not IE, `isIE` will be `false`.
 
