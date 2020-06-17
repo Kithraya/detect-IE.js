@@ -11,4 +11,4 @@ Caveats: When the current document has not yet been determined (in IE), document
 
 This property is available in all compatibility modes.
 
-*At the moment, `detect-ie.js` can not always distinguish between the IE6 and IE7 engine, due to the infamous Windows XP Service Pack Update. There are workarounds, and I will work on implementing one.
+*At the moment, `detect-ie.js` will not always distinguish between the IE6 and IE7 engine, due to the infamous Windows XP Service Pack Update. There are workarounds, to be added.
