@@ -28,7 +28,7 @@ window.isIE = (function(win, doc, undefined) {
 	if (jscript_version === 5.6 || jscript_version === 5.7) { } // TODO: differentiate between IE6 and IE7
 	
 	// if IE11 is in an older document mode, @_jscript_version will be exposed and we can use that
-	// otherwise, the initial IE11 check will return true. If neither are true, it's IE < 10 or not IE.
+	// otherwise, the initial IE11 check will return true. If neither are true, it's IE < 11 or not IE.
 	
 	if ( is_default_IE11 || jscript_version === 11 ){
 		
