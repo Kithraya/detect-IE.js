@@ -5,7 +5,7 @@ window.isIE = (function(win, doc, undefined) {
 
 	// keep the global namespace unpolluted by wrapping in an IIFE
 	
-	var version = "1.1.3", jscript = { engine: null, 'documentMode': document.documentMode };
+	var jscript = { engine: null, 'documentMode': document.documentMode };
 
 	var is_default_IE11 = !!( !('currentScript' in document) && window.msCrypto );
 	
