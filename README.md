@@ -13,3 +13,8 @@ Caveats:
 2. If you have a polyfill that defines 'currentScript', place this code before it, else there will be a false negative for IE 11. Or remove the check for 'currentScript', but that may not be futureproof.
 
 
+Usage:
+
+`if (isIE) {    
+  var version = isIE.version, engine = isIE.engine, documentMode = isIE.documentMode.
+}`
