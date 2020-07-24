@@ -9,7 +9,8 @@ window.isIE = (function(win, doc, undefined) {
 
 	var is_default_IE11 = !!( !document['currentScript'] && window.msCrypto );
 	
-	var map = { '5.5': 5.5, '5.6': 6, '5.7': 7, '5.8': 8, '9': 9, '10': 11, '11': 11 };
+	var mapIE = { '5': 5, '5.5': 5.5, '5.6': 6, '5.7': 7, '5.8': 8, '9': 9, '10': 11, '11': 11 };
+	// Unknown values for IE < 5. Estimates: '1': 3, '3': 4, '5.01': 5.01
 	
 	// msCrypto (with the prefix) is only defined in IE11 in IE11 document mode (for now). (Yes, I checked via Browserstack)
 	// Source: https://developer.mozilla.org/en-US/docs/Web/API/Window/crypto 
@@ -41,7 +42,7 @@ window.isIE = (function(win, doc, undefined) {
 		if (!_jscript_version) { return false } 	
 		
 		jscript.engine = _jscript_version; 
-		jscript.version = map[ String(_jscript_version) ] || 'wtf';
+		jscript.version = mapIE[ String(_jscript_version) ] || _jscript_version;
 		
 	}
 
