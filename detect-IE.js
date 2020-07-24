@@ -28,7 +28,7 @@ window.isIE = (function(win, doc, undefined) {
 	var _jscript_version = Number( new Function("/*@cc_on return @_jscript_version; @*/")() ) || undefined; 
 
 	///  Workaround Test for Windows Service Pack Update (IE6 / 7)
-	if (_jscript_version === 5.7 && !window.XMLHttpRequest) { _jscript_version = 5.6 }
+	if (_jscript_version === 5.7 && !window.XMLHttpRequest) { _jscript_version = 5.6 } // Document Mode wasnt introduced until IE8, so this check works fine
 
 	// if IE11 is in an older document mode, @_jscript_version will be exposed and we can use that
 	// otherwise, the initial IE11 check will return true. If neither are true, it's IE < 11 or not IE.
