@@ -1,3 +1,6 @@
+// Detect IE without User-agent hacks. Supports minification. MIT license. https://github.com/Kithraya/detect-IE
+// Version 1.1.5
+
 window.isIE = (function(win, doc, undefined) { // local IIFE
 	
 	var jscript = { engine: null, 'documentMode': document.documentMode, browser: null };
