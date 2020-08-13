@@ -10,13 +10,11 @@ If the browser is not IE, `isIE` will be `false`.
 Caveats:
 1. When the current document has not yet been determined (in IE), documentMode returns a value of zero (0). This usually happens when a document is loading. When a return value of zero is received, try to determine the document compatibility mode after the DOM has loaded.
 
-2. If you have a polyfill that defines 'currentScript', place this code before it, else there will be a false negative for IE 11. Or remove the check for 'currentScript', but that may not be futureproof.
-
 
 Usage:
 
 `if (isIE) {    
-  var version = isIE.version, 
+  var browser = isIE.browser, 
       engine = isIE.engine, 
       documentMode = isIE.documentMode;
 }`
