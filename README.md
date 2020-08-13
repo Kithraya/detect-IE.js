@@ -14,7 +14,7 @@ Caveats:
 Usage:
 
 ```javascript
-if (isIE) {    
+if (window.isIE) {    
   var browser = isIE.browser, 
       engine = isIE.engine, 
       documentMode = isIE.documentMode;
