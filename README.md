@@ -20,3 +20,16 @@ if (isIE) {
       documentMode = isIE.documentMode;
 }
 ```
+
+OR
+
+```javascript
+  if (isIE[10]) {
+    // do stuff
+  }
+  
+  if (isIE.browser < 10) {
+  
+  
+  }
+```
