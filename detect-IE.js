@@ -29,6 +29,8 @@ window.isIE = (function(win, doc, undefined) {
 	envir = { jscript: jscript_version, documentMode: document.documentMode, is_default_IE11: is_default_IE11 };
 	
 	envir.browser = mapIE[ String(jscript_version) ] || jscript_version;
+	
+	envir[envir.browser] = true;
 
 	return envir;
 
